@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang = "ua">
+    <head>
+        <title>Categories List</title>
+        <link href="../assets/style.css" rel="stylesheet" />
+        <meta charset="utf-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <div class='container' id="contentContainer">
+            <div class='navigation'>
+                <form id="searchForm">
+                    <input type="text" name="search" id="searchInput" required/>
+                    <button type="submit">Пошук</button>
+                </form>
+                <ul>
+                    <li><a id="ebookLink" href="#">Електроні книги</a></li>
+                    <li><a id="categoryLink" href="#">Категорії</a></li>
+                    <li><a id="propertyLink" href="#">Властивості</a></li>
+                    <li><a id="logoutLink" href="#">Вийти</a></li>
+                </ul>
+            </div>
+            <div class='table-content'>
+                    <h1 id="pageHeader">Категорії</h1>
+                    <table id="dataTable">
+                        
+                    </table>
+            </div>
+            <div class='form-content'>
+                <form method="POST" id="categoryForm" class="app-form">
+                    <p><input type="text" id="categoryNameInput" placeholder="Назва" name="name" required/></p>
+                    <input type="hidden" id="categoryIdInput" value=""/>
+                    <p><button type="submit">Зберегти</button></p>
+                    <p id="categoryErrorText" class="color"></p>    
+                    <p id="categoryDeleteErrorText" class="color"></p>
+                </form>
+                <form method="POST" id="propertyForm" class="app-form">
+                    <p><input type="text" id="propertyNameInput" placeholder="Назва" name="name" required/></p>
+                    <p><input type="text" id="propertyUnitsInput" placeholder="Одиниці вимірювання" name="units" required/></p>
+                    <input type="hidden" id="propertyIdInput" value=""/>
+                    <p><button type="submit">Зберегти</button></p>
+                    <p id="propertyErrorText" class="color"></p>
+                    <p id="propertyDeleteErrorText" class="color"></p>
+                </form>
+                <form method="POST" id="ebookForm" class="app-form">
+                    <p><input type="text" id="ebookBrandInput" placeholder="Виробник" name="brand" required/></p>
+                    <p><input type="text" id="ebookModelInput" placeholder="Модель" name="model" required/></p>
+                    <p><select id="ebookCategoryInput"></select> </p>
+                    <input type="hidden" id="ebookIdInput" value=""/>
+                    <div id="propInputsContainer"></div>
+                    <p><button type="submit">Зберегти</button></p>
+                </form>
+            </div>
+        </div>
+        <div class='container' id="loginContainer">
+            <div class='form-content'>
+                <h1>Вхід</h1>
+                <form method="POST" id="loginForm">
+                    <p><input type="text" placeholder="Логін" id="loginInput" name="login" required/></p>
+                    <p><input type="password" placeholder="Пароль" id="passwordInput" name="password" required/></p>
+                    <p><button type="submit">Увійти</button></p>
+                    <p id="loginErrorText"></p>
+                </form>
+            </div>
+        </div>
+    </body>
+    <script src="../assets/main-csr.js"></script>
+</html>
